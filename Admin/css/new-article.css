@@ -1,3 +1,12 @@
 .form-wrapper{
+    background-color: #eee;
+    padding: 20px;
+}
 
-}000
+.note-editable{
+    background-color: #fff;
+}
+
+.chosen-container, .chosen-container-multi{
+    width: 100% !important;
+}

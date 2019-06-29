@@ -1,4 +1,4 @@
-1<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ko">
   <head>
     <meta charset="utf-8">
@@ -9,8 +9,12 @@
 
     <!-- 부트스트랩 -->
     <link href="./vendor/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/default.css">
+    <link rel="stylesheet" type="text/css" href="../Admin/vendor/chosen_v1.8.7/chosen.min.css">
+    <link rel="stylesheet" type="text/css" href="../Admin/vendor/fontawesome-free-5.9.0-web/css/fontawesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../Admin/vendor/summernote-0.8.12-dist/dist/summernote.css">
 
+    <link rel="stylesheet" type="text/css" href="css/default.css">
+    <link rel="stylesheet" type="text/css" href="css/new-article.css">
     <!-- IE8 에서 HTML5 요소와 미디어 쿼리를 위한 HTML5 shim 와 Respond.js -->
     <!-- WARNING: Respond.js 는 당신이 file:// 을 통해 페이지를 볼 때는 동작하지 않습니다. -->
     <!--[if lt IE 9]>
@@ -139,7 +143,7 @@
                   </div>
                   <div class="form-group">
                     <label class="sr-only">Tag</label>
-                    <select data-placeholder="Select tags" multiple name="tags">
+                    <select data-placeholder="Select tags" multiple name="tags" class="form-control chosen-select">
                       <option></option>
                       <option>html</option>
                       <option>css</option>
@@ -149,7 +153,7 @@
                   </div>
                   <div class="form-group">
                     <label class="sr-only">Article</label>
-                    <textarea class="form-control" placeholder="Article" name="article"></textarea>
+                    <textarea class="form-control summernote" placeholder="Article" name="article"></textarea>
                   </div>
                   <div class="checkbox">
                     <label>
@@ -179,6 +183,30 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <!-- 모든 컴파일된 플러그인을 포함합니다 (아래), 원하지 않는다면 필요한 각각의 파일을 포함하세요 -->
     <script src="vendor/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <script src="vendor/chosen_v1.8.7/chosen.jquery.min.js"></script>
+    <script src="vendor/summernote-0.8.12-dist/dist/summernote.min.js"></script>
     <script src="js/default.js"></script>
+
+    <!-- https://harvesthq.github.io/chosen/ -->
+    <script type="text/javascript">
+      var config = {
+        '.chosen-select':{},
+        '.chosen-select-deselect':{allow_single_deselect:true},
+        '.chosen-select-no-single':{disable_serch_threshold:10},
+        '.chosen-select-no-result':{no_results_text:'Oops, nothing found!'},
+        '.chosen-select-width':{width:"95%"} 
+      }
+      for(var selector in config){
+        $(selector).chosen(config[selector]);
+      }
+    </script>
+    <!-- https://summernote.org/ -->
+    <script type="text/javascript">
+      $('.summernote').summernote({
+        height:200
+      })
+
+    </script>
+    <!-- https://fontawesome.com/?from=io -->  
   </body>
 </html>

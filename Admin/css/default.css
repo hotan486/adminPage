@@ -8,7 +8,7 @@ html, body{
 
 .box{
 
-    border: 1px red dotted;
+    /* border: 1px red dotted; */
 }
 
 #side-menu{
@@ -231,3 +231,4 @@ html, body{
 .content-inner{
     padding: 20px;
 }
+
